@@ -5,17 +5,30 @@
  */
 package proyecto;
 
+import java.util.*;
+import java.math.*;
+import java.security.*;
 /**
  *
  * @author ASUS
  */
 public class Main {
 
+    public static String randomtext(){
+        SecureRandom random= new SecureRandom();
+        String txt= new BigInteger(130, random).toString();
+        return txt;
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      MyArrayList<Usuario> usuarios= new MyArrayList<>();
+      Random r= new Random();
+        for (int i = 0; i < 10; i++) {
+            Usuario p= new Usuario(r.nextInt(8),randomtext(),randomtext(),randomtext());
+            usuarios.add(p);
+        }
     }
     
 }

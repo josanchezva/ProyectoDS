@@ -60,7 +60,7 @@ public class MyArrayList<T> implements Iterable<T>	{
 	return;
     }
     T[ ] old = items;
-    items = (T []) new Object[ newCapacity ];
+    items = (T []) new Object[newCapacity];
     for( int i = 0; i < size( ); i++ ){
 	items[i] = old[ i ];
     }
