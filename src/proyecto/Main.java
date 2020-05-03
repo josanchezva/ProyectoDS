@@ -23,12 +23,18 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      MyArrayList<Usuario> usuarios= new MyArrayList<>();
-      Random r= new Random();
-        for (int i = 0; i < 10; i++) {
-            Usuario p= new Usuario(r.nextInt(8),randomtext(),randomtext(),randomtext());
-            usuarios.add(p);
-        }
+        MyArrayList<Usuario> usuarios= new MyArrayList<>();
+        Random r= new Random();
+        long startTime = System.currentTimeMillis();
+          for (int i = 0; i < 1000000; i++) {
+              int j=0;
+              j++;
+              Usuario p= new Usuario(j,"Hola","Hola","Hola");
+              usuarios.add(p);
+          }
+        long stopTime = System.currentTimeMillis();
+        long elapsedTime = stopTime - startTime;
+        System.out.println(elapsedTime);
     }
     
 }
