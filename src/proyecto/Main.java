@@ -24,17 +24,24 @@ public class Main {
      */
     public static void main(String[] args) {
         MyArrayList<Usuario> usuarios= new MyArrayList<>();
+        MyArrayList<medicamento> medicamentos= new MyArrayList<>();
+        
         Random r= new Random();
         long startTime = System.currentTimeMillis();
-          for (int i = 0; i < 1000000; i++) {
+          /*for (int i = 0; i < 1000000; i++) {
               int j=0;
               j++;
               Usuario p= new Usuario(j,"Hola","Hola","Hola");
               usuarios.add(p);
+          }*/
+          for (int i = 0; i < 10000; i++) {
+              int j=0;
+              j++;
+              medicamento p= new medicamento("hola",5,3,3);
+              medicamentos.add(p);
           }
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
         System.out.println(elapsedTime);
     }
-    
 }
