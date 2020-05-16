@@ -28,12 +28,14 @@ public class Main {
         
         Random r= new Random();
         long startTime = System.currentTimeMillis();
+        //este ciclo evalua la creacion de usuarios
           /*for (int i = 0; i < 1000000; i++) {
               int j=0;
               j++;
               Usuario p= new Usuario(j,"Hola","Hola","Hola");
               usuarios.add(p);
           }*/
+        //este ciclo evalua la creacion de medicamentos
           for (int i = 0; i < 10000; i++) {
               int j=0;
               j++;
